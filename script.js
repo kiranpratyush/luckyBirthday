@@ -6,7 +6,7 @@ const btn = document.querySelector("button");
 const resultElement = document.querySelector(".result");
 const resultText = document.querySelector(".resultText");
 const btnClose = document.querySelector(".close");
-const divPrivacy = document.querySelector(".privacy")
+const divPrivacy = document.querySelector(".privacy");
 
 function checkLucky(number1, number2) {
   let result = 0;
@@ -17,14 +17,12 @@ function checkLucky(number1, number2) {
       result += Number(number1[i]);
     }
   }
-  console.log(result)
-  if(result===0)
-  {
+  console.log(result);
+  if (result === 0 || number2 == 0) {
     resultElement.classList.toggle("display");
     resultElement.classList.add("success");
     resultText.textContent = "Please enter correct value";
-  }
-  else if (result % number2 === 0) {
+  } else if (result % number2 === 0) {
     console.log("True");
     resultElement.classList.toggle("display");
     resultElement.classList.add("success");
@@ -36,13 +34,11 @@ function checkLucky(number1, number2) {
   }
 }
 
-function close()
-{
+function close() {
   divPrivacy.classList.toggle("display");
 }
 
 btn.addEventListener("click", function () {
-  
   checkLucky(dateOfBirth.value, Number(luckyNumber.value));
 });
 resultElement.addEventListener("click", function () {
@@ -54,4 +50,4 @@ resultElement.addEventListener("click", function () {
   }
 });
 
-btnClose.addEventListener("click",close);
+btnClose.addEventListener("click", close);
