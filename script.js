@@ -18,6 +18,12 @@ function checkLucky(number1, number2) {
     }
   }
   console.log(result)
+  if(result===0)
+  {
+    resultElement.classList.toggle("display");
+    resultElement.classList.add("success");
+    resultText.textContent = "Please enter correct value";
+  }
   if (result % number2 === 0) {
     console.log("True");
     resultElement.classList.toggle("display");
