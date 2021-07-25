@@ -24,7 +24,7 @@ function checkLucky(number1, number2) {
     resultElement.classList.add("success");
     resultText.textContent = "Please enter correct value";
   }
-  if (result % number2 === 0) {
+  else if (result % number2 === 0) {
     console.log("True");
     resultElement.classList.toggle("display");
     resultElement.classList.add("success");
@@ -42,6 +42,7 @@ function close()
 }
 
 btn.addEventListener("click", function () {
+  
   checkLucky(dateOfBirth.value, Number(luckyNumber.value));
 });
 resultElement.addEventListener("click", function () {
