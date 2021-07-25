@@ -11,12 +11,13 @@ body {
 }
 .main {
   max-width: 297px;
-  width: 50%;
+  width: 100%;
   background-color: #fff;
   margin: 2rem auto;
   border-radius: 10px;
   padding-bottom: 1rem;
   margin-bottom:0.3rem;
+  margin-top:0.5rem;
 }
 
 .main h1 {
@@ -159,10 +160,10 @@ footer {
 
 footer p {
   text-align: center;
-  padding-top: 1.2rem;
+  padding-top: 0.5rem;
 }
 footer ul {
-  padding-top: 1.2rem;
+  padding-top: 0.2rem;
   padding-left: 0px;
   text-align: center;
   margin-bottom: 0px;
@@ -171,5 +172,5 @@ footer ul li {
   display: inline-block;
   list-style-type: none;
   margin: 0px 1.2rem;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
