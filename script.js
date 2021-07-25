@@ -5,6 +5,8 @@ const luckyNumber = document.querySelector("#lucky");
 const btn = document.querySelector("button");
 const resultElement = document.querySelector(".result");
 const resultText = document.querySelector(".resultText");
+const btnClose = document.querySelector(".close");
+const divPrivacy = document.querySelector(".privacy")
 
 function checkLucky(number1, number2) {
   let result = 0;
@@ -28,6 +30,11 @@ function checkLucky(number1, number2) {
   }
 }
 
+function close()
+{
+  divPrivacy.classList.toggle("display");
+}
+
 btn.addEventListener("click", function () {
   checkLucky(dateOfBirth.value, Number(luckyNumber.value));
 });
@@ -39,3 +46,5 @@ resultElement.addEventListener("click", function () {
     resultElement.classList.remove("faliure");
   }
 });
+
+btnClose.addEventListener("click",close);
